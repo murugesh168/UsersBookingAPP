@@ -6,10 +6,10 @@ const connectDB = async () => {
         await mongoose.connect(process.env.MONGO_URI);
         const userCollection = mongoose.connection.collection('users');
         const indexes = await userCollection.indexes();
-        const hasUsernameIndex = indexes.some((index) => index.name === 'username');
+        const hasUsernameIndex = indexes.some((index) => index.name === 'username_1');
 
         if(hasUsernameIndex){
-            await userCollection.dropIndex('username._id');
+            await userCollection.dropIndex('username_1');
             console.log('Removed user name of index 1 from collection');
         }
 

@@ -1,5 +1,4 @@
-{
-<<<<<<< HEAD
+
   "name": "front-end",
   "private": true,
   "version": "0.0.0",
@@ -30,7 +29,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "vite": "^8.0.12"
-=======
+
   "name": "backend",
   "version": "1.0.0",
   "description": "",
@@ -55,6 +54,5 @@
     "multer": "^2.1.1",
     "nodemailer": "^8.0.10",
     "nodemon": "^3.1.14"
->>>>>>> e591b01238eea8ca3c4f02c860e4a6a77ba86846
   }
-}
+
