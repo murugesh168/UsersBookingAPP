@@ -5,8 +5,8 @@ import {useNavigate, Link} from 'react-router-dom';
 
 
 function Login() {
-  const [email, setEmail] = useState(" ");
-  const [password, setPassword] = useState(" ");
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const [error, setError] = useState(" ");
   const navigate = useNavigate();
 
@@ -46,8 +46,8 @@ function Login() {
 
             <div>
                 <label className="block mb-2 font-medium" htmlFor="password">Password</label>
-                <input 
-                    id="password"
+                
+                <input  id="password"
                     className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
                     type= "password"
                     value={password}

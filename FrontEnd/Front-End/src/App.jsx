@@ -6,7 +6,7 @@ import Dashboard from './pages/Dashboard';
 import Register from './components/Register';
 import Navbar from './components/Navbar';
 import ForgotPassword from './components/ForgotPassword';
-import ResetPassword from './components/resetPassword';
+import ResetPassword from './components/ResetPassword';
 
 function App() {
   return (

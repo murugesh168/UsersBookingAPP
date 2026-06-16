@@ -22,7 +22,7 @@ function Dashboard() {
             to="/"
             className="text-blue-600 font-medium"
           >
-            Back Home
+            Back To Home
           </Link>
         </div>
 

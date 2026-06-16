@@ -72,9 +72,7 @@ function ResetPassword() {
               className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
               placeholder="Enter new password"
               value={password}
-              onChange={(e) =>
-                setPassword(e.target.value)
-              }
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
@@ -92,9 +90,7 @@ function ResetPassword() {
               className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
               placeholder="Confirm password"
               value={confirmPassword}
-              onChange={(e) =>
-                setConfirmPassword(e.target.value)
-              }
+              onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
 

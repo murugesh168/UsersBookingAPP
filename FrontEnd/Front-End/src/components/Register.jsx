@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Register() {
   return (
@@ -49,6 +50,12 @@ function Register() {
           <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700">
             Register
           </button>
+
+          <div className="text-center">
+            <Link to="/login" className="text-blue-600 font-medium">
+              Back to Login
+            </Link>
+          </div>
 
         </form>
       </div>
