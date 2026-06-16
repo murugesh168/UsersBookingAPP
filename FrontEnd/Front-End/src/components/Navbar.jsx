@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <div>
       <nav className="bg-pink-300 shadow-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center m-5">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
           <h1 className="text-3xl font-bold text-blue-600">
              FrontDesk
