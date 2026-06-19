@@ -5,6 +5,11 @@ const crypto = require("crypto");
 const mailer = require("../config/mailer");
 require("dotenv").config();
 
+const frontendUrl = (
+    process.env.FRONTEND_URL?.trim() ||
+    "http://localhost:5173"
+).replace(/\/+$/, "");
+
 
 // User Registration
 const registerUser = async (req, res) => {
@@ -165,7 +170,7 @@ const forgotPassword = async (req, res) => {
         await User.save();
 
         const resetLink =
-            `http://localhost:5173/reset-password/${resetToken}`;
+            `${frontendUrl}/reset-password/${resetToken}`;
 
         await mailer.sendMail({
             from: process.env.SMTP_USER,

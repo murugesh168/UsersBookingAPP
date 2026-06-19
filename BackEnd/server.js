@@ -12,6 +12,11 @@ const mailer = require("./config/mailer");
 //Middlewares
 app.use(cors());
 app.use(bodyParser.json());
+app.get("/api/status", (req, res) => {
+    res.status(200).json({
+        status: "ok"
+    });
+});
 
 //connect to MongoDB
 app.use("/api/auth", authRoutes);
@@ -22,17 +27,19 @@ const PORT = process.env.PORT || 3000;
 const startServer = async () => {
     try {
         await connectDB();
-        try {
-            await mailer.verify();
-            console.log("SMTP Connected");
-        } catch (mailError) {
-            console.log(`SMTP verification failed: ${mailError.message}`);
-        }
         app.listen(PORT, ()=>{
             console.log(`Server is running on Port ${PORT}`);
         });
+        mailer.verify()
+            .then(() => {
+                console.log("SMTP Connected");
+            })
+            .catch((mailError) => {
+                console.log(`SMTP verification failed: ${mailError.message}`);
+            });
     } catch (error) {
         console.log("Server startup aborted");
+        console.log(error.message);
     }
 };
 startServer();

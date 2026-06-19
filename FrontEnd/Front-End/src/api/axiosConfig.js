@@ -1,8 +1,20 @@
 import axios from "axios";
 
+const rawBaseUrl = import.meta.env.VITE_API_URL?.trim();
+const fallbackBaseUrl =
+    import.meta.env.DEV ? "http://localhost:3000" : "";
+const baseURL = (rawBaseUrl || fallbackBaseUrl).replace(/\/+$/, "");
+
+if (!baseURL) {
+    console.warn(
+        "VITE_API_URL is not configured. API requests will use the current origin."
+    );
+}
+
 const api = axios.create({
     // creates instance custom axios api
-    baseURL : import.meta.env.VITE_API_URL   // backend url
+    baseURL, // backend url
+    timeout: 15000
 });
 
 //Add  a token to the request headers
