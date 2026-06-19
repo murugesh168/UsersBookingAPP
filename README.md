@@ -81,16 +81,7 @@ cd BackEnd
 npm install
 ```
 
-3. Create a `.env` file in the BackEnd directory with the following variables:
-```
-PORT=3000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-SMTP_EMAIL=your_email@gmail.com
-SMTP_PASSWORD=your_app_password
-```
-
-4. Start the server:
+3. Start the server:
 ```bash
 npm start
 ```
@@ -113,32 +104,12 @@ cd FrontEnd/Front-End
 npm install
 ```
 
-3. Create a `.env` file with:
-```
-VITE_API_URL=http://localhost:3000/api
-```
-
-4. Start the development server:
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
 The application will be available at `http://localhost:5173`
-
-## 📚 API Endpoints
-
-### Authentication Routes (`/api/auth`)
-- `POST /register` - Register a new user
-- `POST /login` - Login user
-- `POST /logout` - Logout user
-- `GET /profile` - Get user profile (requires authentication)
-
-### Booking Routes (`/api/bookings`)
-- `GET /` - Get all bookings
-- `GET /:id` - Get booking by ID
-- `POST /` - Create a new booking
-- `PUT /:id` - Update booking
-- `DELETE /:id` - Delete booking
 
 ## 🔒 Authentication
 
@@ -170,19 +141,3 @@ npm run build    # Build for production
 npm run preview  # Preview production build
 npm run lint     # Run ESLint
 ```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit issues and pull requests.
-
-## 📄 License
-
-This project is licensed under the ISC License.
-
-## 📞 Support
-
-For support, please open an issue on the GitHub repository.
-
----
-
-**Happy Booking!** 🎉
